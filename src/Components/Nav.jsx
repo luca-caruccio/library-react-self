@@ -10,16 +10,17 @@ const Nav = () => {
                 <ul className="nav__links">
                     <li className="nav__list">
                         <a href="/" className="nav_link">
+                        Home
                         </a>
                     </li>
                     <li className="nav__list">
                         <a href="/" className="nav_link">
+                        Books
                         </a>
                     </li>
-                    <li className="nav__list">
-                        <a href="/" className="nav_link">
-                        </a>
-                    </li>
+                    <button className="btn__menu">
+                        <FontAwesomeIcon icon="bars" />
+                    </button>
                  </ul>
             </div>
         </nav>
