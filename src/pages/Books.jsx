@@ -2,6 +2,7 @@ import React from 'react'
 import { books } from '../data'; 
 import Book from '../Components/ui/book';
 
+
 const Books = () => {
   return (
     <div id='books__body'>
@@ -19,9 +20,9 @@ const Books = () => {
                         </select>
                     </div>
                     <div className="books">
-                        {
-                            books.map((book) => (<Book book={book} key={book.id}/>))
-                        }
+                        {books.map((book) => (
+                            <Book book={book} key={book.id}/>
+                            ))}
                     </div>
                 </div>
             </div>
