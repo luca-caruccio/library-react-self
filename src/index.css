@@ -421,6 +421,8 @@ FEATURES
 }
 
 .book__img--wrapper {
+  width: 150px;
+  height: 200px;
   margin-bottom: 8px;
   border-radius: 4px;
   overflow: hidden;
