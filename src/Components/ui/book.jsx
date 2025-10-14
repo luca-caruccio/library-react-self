@@ -3,7 +3,7 @@ import React from 'react'
 
 const Book = ({ book }) => {
   return (
-   <div className="books">
+   <div className="book">
                      <a href="/">
                        <figure className="book__img--wrapper">
                          <img src={book.url} alt="" />
