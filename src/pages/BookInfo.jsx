@@ -6,7 +6,7 @@ import Price from '../Components/ui/Price';
 import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
 import Book from '../Components/ui/book';
 
-const BookInfo = ({ books }) => {
+const BookInfo = ({ books, addToCart }) => {
     const { id } =  useParams();
     const book = books.find(book => +book.id === +id);
   return (
@@ -22,7 +22,7 @@ const BookInfo = ({ books }) => {
                     </Link>
                 </div>
                 <div className="book__selected">
-                    <figure className="book__selected--figure">
+                    <figure className="book__selected--img">
                         <img src={book.url} />
                     </figure>
                     <div className="book__selected--description">
@@ -50,7 +50,7 @@ const BookInfo = ({ books }) => {
                             alias, eius excepturi, temporibus maxime autem.
                         </h3>
                        </div>
-                       <button className='btn'>
+                       <button className='btn' onClick={() => addToCart(book)}>
                         Add to Cart
                        </button>
                     </div>
