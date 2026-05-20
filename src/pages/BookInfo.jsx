@@ -5,10 +5,19 @@ import Rating from '../Components/ui/Rating';
 import Price from '../Components/ui/Price';
 import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
 import Book from '../Components/ui/book';
+import { useState } from 'react';
 
-const BookInfo = ({ books, addToCart }) => {
+const BookInfo = ({ books, addToCart, cart }) => {
     const { id } =  useParams();
     const book = books.find(book => +book.id === +id);
+
+    function addBookToCart(book) {
+        addToCart(book)
+    }
+
+    function bookExistsOnCart() {
+        return cart.find(book => book.id === +id)
+    }
   return (
    <div id="books__body">
     <main id="books__main">
@@ -50,9 +59,17 @@ const BookInfo = ({ books, addToCart }) => {
                             alias, eius excepturi, temporibus maxime autem.
                         </h3>
                        </div>
-                       <button className='btn' onClick={() => addToCart(book)}>
+                       {
+                        bookExistsOnCart() ? (
+                        <Link to={'/cart'} className="book__link">
+                        <button className='btn'>Checkout</button> 
+                        </Link>
+                        ) : (
+                        <button className='btn' onClick={() => addBookToCart(book)}>
                         Add to Cart
                        </button>
+                      ) }
+                       
                     </div>
                 </div>
             </div>

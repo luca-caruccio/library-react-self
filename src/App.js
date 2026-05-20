@@ -14,13 +14,12 @@ function App() {
   const [cart, setCart] = useState([]);
 
 function addToCart(book) {
-  setCart([...cart, {...book, quantity:1}])
-}  
+  setCart ([...cart, book])
+}
 
-useEffect(() => {
-  console.log(cart);
+useEffect (() => {
+  console.log(cart)
 }, [cart])
-
   return (
     <Router>
     <div className="App">
