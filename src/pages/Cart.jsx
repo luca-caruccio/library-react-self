@@ -19,7 +19,7 @@ export default function Cart() {
                         <div className="cart__item">
                             <div className="cart__book">
                                 <img src="https://m.media-amazon.com/images/I/81gTRv2HXrL._AC_UF1000,1000_QL80_.jpg" 
-                                class="cart__book--img" />
+                                className="cart__book--img" />
                                 <div className="cart__book--info">
                                     <span className="cart__book--title">
                                         Crack the Coding Interview
@@ -33,7 +33,7 @@ export default function Cart() {
                                 </div>
                             </div>
                             <div className="cart__quantity">
-                                <input type="number" min={0} max={99} class="cart__input"/>
+                                <input type="number" min={0} max={99} className="cart__input"/>
                             </div>
                             <div className="cart__total">
                                 $29.99
